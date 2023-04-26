@@ -15,7 +15,7 @@ function Search () {
       setSearchResults(shows)
     }
     fetchResults()
-  })
+  }, [params.searchText])
   
   
   return (
