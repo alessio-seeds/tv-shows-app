@@ -10,7 +10,7 @@ function Header() {
     if (event.target.value.trim() === "") {
       navigate("/")
     } else {
-      navigate("/search/" + event.target.value.trim() )
+      navigate("/search/" + event.target.value.trim())
     }
   }
 
