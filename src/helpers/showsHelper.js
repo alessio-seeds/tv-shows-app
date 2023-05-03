@@ -1,8 +1,9 @@
 import showsData from "../shows-data"
 
+const defaultImg = {medium: " https://via.placeholder.com/210x295?text=:( "}
+
 function transformShow (show) {
-  const transformedShow = {...show}
-  transformedShow.image = show.image || {medium: " https://via.placeholder.com/210x295?text=:( "}
+  const transformedShow = {...show, image:show.image || defaultImg}
   return transformedShow
 }
 
