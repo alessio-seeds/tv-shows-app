@@ -7,12 +7,18 @@ function transformShow (show) {
   return transformedShow
 }
 
-export function getShowByID(id) {
-  return showsData.find( show => show.id.toString() === id)
+export async function getShowByID(id) {
+  const response = await fetch("https://api.tvmaze.com/shows/" + id + "?embed[]=cast&embed[]=seasons")
+  const showData = await response.json()
+  return transformShow(showData)
 }
 
-export function getHomeShows() {
-  return showsData
+
+export async function getHomeShows() {
+  const response = await fetch("https://api.tvmaze.com/schedule")
+  const jsonData = await response.json()
+  const homeShows = jsonData.map(episode=> transformShow(episode.show))
+  return homeShows
 }
 
 export async function searchForShow (text) {

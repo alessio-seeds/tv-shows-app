@@ -9,13 +9,13 @@ function Search () {
 
   const [searchResults, setSearchResults] = useState([])
 
-  useEffect( () => {
+  useEffect( (() => {
     const fetchResults = async () => {
       const shows = await searchForShow(params.searchText)
       setSearchResults(shows)
     }
     fetchResults()
-  }, [params.searchText])
+  }), [params.searchText])
   
   
   return (
