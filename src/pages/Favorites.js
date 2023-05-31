@@ -19,11 +19,6 @@ function Favorites() {
   return (
     <div>
       <h2>This is the Favorites page</h2>
-      <ul>
-        {shows.map((show) => (
-          <li>{show.name}</li>
-        ))}
-      </ul>
 
       <ShowList shows={shows} />
     </div>
