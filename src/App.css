@@ -29,19 +29,17 @@ input {
 .Navigation {
   display: flex;
   gap: 30px;
-  align-items:center;
+  align-items: center;
 }
 
 ul {
   list-style: none;
 }
 
-
 .Navigation a {
   color: white;
   font-weight: bold;
 }
-
 
 .Show {
   display: block;
@@ -65,3 +63,8 @@ ul {
   grid-template-columns: repeat(4, 1fr);
 }
 
+.ShowPage {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
